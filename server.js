@@ -58,7 +58,7 @@ app.get('/:user/:project', function(req, res) {
   }, function(err, response) {
     if (err) {
       res.render('index',
-      {error: true, message: "Could not find user with that project. Or it's private."});
+      {error: true, message: "Could not find user with that project. Or it's private. Or Github API limit was reached."});
     } else {
       res.render("code");
     }
