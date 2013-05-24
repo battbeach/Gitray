@@ -159,8 +159,8 @@ app.post('/project', function(req, res) {
   res.redirect("/" + username + "/" + project);
 });
 
-app.listen(process.env.PORT);
-console.log("App listening on port", process.env.PORT);
+app.listen(3000);
+console.log("App listening on port 3000");
 
 
 // Some functions
