@@ -2,4 +2,4 @@
 
 cd /home/2013/Gitray
 git pull
-bin/restart.sh
+script/restart.sh
