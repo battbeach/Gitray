@@ -21,6 +21,8 @@ Installation
 
 ```
 Clone the repo
+Rename credentials.example.json to credentials.json and fill in information (if you want more API requests)
+
 npm install
 node app.js
 ```
