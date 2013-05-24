@@ -4,7 +4,7 @@ Gitray
 Gitray makes it easy to view Github projects at a glance. You type in a project and are able to quickly manoeuvre it similarly to as you would in textmate. 
 
 #### Why?
-I found I wanted a quick way to check out a project without having to clone it and open it in Sublime. Navigating on Githubs site can be disorienting if it is a large project.
+I found I wanted a quick way to check out a project without having to clone it and open it in Sublime. Navigating on Githubs site can be disorienting if it is a large project. There may be a quicker or alternative solution to what I wanted but it was still a joy working with the github api (pretty awesom!);
 
 Contribute
 ----------
