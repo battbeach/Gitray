@@ -167,6 +167,9 @@ console.log("App listening on port 3000");
 
 // Some functions
 
+// Dynatree expects the format to be formatted like an array.
+// See this Stackoverflow answer for more info:
+// http://stackoverflow.com/questions/16704961/javascript-convert-string-path-to-a-formatted-array
 function parseFolder(name, path, type, sha) {
     var cur = files;
     var split = path.split("/");

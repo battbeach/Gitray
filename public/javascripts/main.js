@@ -69,10 +69,12 @@
   		});
   	});
   	
+// Ace expects the mode in this format
 function makeModeString(mode) {
   return "ace/mode/" + mode;
 }  	
-  	
+
+// The messss. Case statement be easier? Or other solution. 
 function modeFromExtension(extension) {
   if (extension === "c") {
     return makeModeString("c_cpp");
