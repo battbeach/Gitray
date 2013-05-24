@@ -1,0 +1,27 @@
+extend layout
+block content  
+  p
+    h4 Easy navigation of projects on <a href="http://github.com">Github</a>.
+  p
+    | (View the project in a file tray akin to TextMate or Sublime Text)
+
+  - if (error)
+    data-alert.alert-box.alert.round= message
+  .row
+    .large-12.columns
+    form(method="POST", action="/project")
+      input(type='text', placeholder='Enter a github project URL here', name="project")
+      .row
+        .large-12.columns
+          input(type='submit', value="View Project", class="large button expand")
+      
+  p
+    h5 Examples
+  ul
+    li https://github.com/sauerbraten/persona
+    li Jonovono/c
+    li Clojure clojurescript
+  
+  #footer
+    p Or simply replace github.com with gitray.com
+    p <img src="/img/github.png"/> ---> <img  src="/img/gitray.png"/>
