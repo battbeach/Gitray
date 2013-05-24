@@ -32,7 +32,6 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.engine(".html", require('jade').__express);
 app.use(express.logger('dev'));
-app.use(express.favicon("public/favicon.ico"));
 app.use(stylus.middleware(
   { src: __dirname + '/public'
   , compile: compile
@@ -40,6 +39,8 @@ app.use(stylus.middleware(
 ));
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.favicon(__dirname + "/public/favicon.ico"));
+
 
 app.get('/', function (req, res) {
   res.render('index',
