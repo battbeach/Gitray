@@ -27,6 +27,11 @@ npm install
 node server.js
 ```
 
+Author
+------
+
+Feel free to message me: jordan@howlett.io
+
 
 License
 -
