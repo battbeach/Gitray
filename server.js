@@ -147,7 +147,7 @@ app.get('/content', function(req, res) {
 
 app.post('/project', function(req, res) {
   var project = req.body.project;
-  var regex = /(https?:\/\/(www.)?github.com|github.com)?\/?(\w+)(\/|\s)(\w+)/
+  var regex = /(https?:\/\/(www.)?github.com|github.com)?\/?(\S+)(\/|\s)(\S+)/
   var result = project.match(regex);
   
   if (!result) {
