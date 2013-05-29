@@ -74,69 +74,50 @@ function makeModeString(mode) {
   return "ace/mode/" + mode;
 }  	
 
+// List of recognized extensions
+var extensions = {
+  "c": "c_cpp",
+  "js": "javascript",
+  "clj": "clojure",
+  "cljs": "clojure",
+  "coffee": "coffee",
+  "cs": "csharp",
+  "css": "css",
+  "dart": "dart",
+  "go": "golang",
+  "haml": "haml",
+  "hs": "haskell",
+  "lhs": "haskell",
+  "html": "html",
+  "jade": "jade",
+  "json": "json",
+  "less": "less",
+  "lisp": "lisp",
+  "md": "markdown",
+  "markdown": "markdown",
+  "pl": "perl",
+  "pm": "perl",
+  "php": "php",
+  "py": "python",
+  "rb": "ruby",
+  "erb": "html_ruby",
+  "sass": "sass",
+  "scala": "scala",
+  "scm": "scheme",
+  "ss": "scheme",
+  "sql": "sql",
+  "styl": "stylus",
+  "xml": "xml",
+  "yml": "yaml",
+  "am": "makefile",
+  "default": "text",
+}
+
 // The messss. Case statement be easier? Or other solution. 
 function modeFromExtension(extension) {
-  if (extension === "c") {
-    return makeModeString("c_cpp");
-  } else if (extension === "js") {
-    return makeModeString("javascript");
-  } else if (extension === "clj" || extension === "cljs") {
-    return makeModeString("clojure");
-  } else if (extension === "coffee") {
-    return makeModeString("coffee");
-  } else if (extension === "cs") {
-    return makeModeString("csharp");
-  } else if (extension === "css") {
-    return makeModeString("css");
-  } else if (extension === "dart") {
-    return makeModeString("dart");
-  } else if (extension === "go") {
-    return makeModeString("golang");
-  } else if (extension === "haml") {
-    return makeModeString("haml");
-  } else if (extension === "hs" || extension === "lhs") {
-    return makeModeString("haskell");
-  } else if (extension === "html") {
-    return makeModeString("html");
-  } else if (extension === "jade") {
-    return makeModeString("jade");
-  } else if (extension === "json") {
-    return makeModeString("json");
-  } else if (extension === "less") {
-    return makeModeString("less");
-  } else if (extension === "lisp") {
-    return makeModeString("lisp");
-  } else if (extension === "md" || extension === "markdown") {
-    return makeModeString("markdown");
-  } else if (extension === "pl" || extension === "pm") {
-    return makeModeString("perl");
-  } else if (extension === "php") {
-    return makeModeString("php");
-  } else if (extension === "py") {
-    return makeModeString("python");
-  } else if (extension === "rb") {
-    return makeModeString("ruby");
-  } else if (extension === "erb") {
-    return makeModeString("html_ruby");
-  } else if (extension === "sass") {
-    return makeModeString("sass");
-  } else if (extension === "scala") {
-    return makeModeString("scala");
-  } else if (extension === "scm" || extension === "ss") {
-    return makeModeString("scheme");
-  } else if (extension === "sql") {
-    return makeModeString("sql");
-  } else if (extension === "styl") {
-    return makeModeString("stylus");
-  } else if (extension === "xml") {
-    return makeModeString("xml");
-  } else if (extension === "yml") {
-    return makeModeString("yaml");
-  } else if (extension === "am") {
-    return makeModeString("makefile");
-  }
-  
-  else {
-    return makeModeString("text");
+  if (extension in extensions) {
+    return makeModeString(extensions[extension])
+  } else {
+    return makeModeString(extensions["default"])
   }
 }
